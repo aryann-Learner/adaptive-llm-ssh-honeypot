@@ -29,6 +29,8 @@ class ShellInteraction(BaseModel):
     exit_code: int = 0
     suspicious: bool = False
     prompt_injection: bool = False
+    events: List[str] = Field(default_factory=list)
+    history: List[str] = Field(default_factory=list)
 
 
 class EnvironmentProfile(BaseModel):

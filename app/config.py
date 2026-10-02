@@ -23,6 +23,8 @@ class Settings:
     ssh_banner: str = os.getenv("SSH_BANNER", "Ubuntu 22.04 LTS")
     default_username: str = os.getenv("DEFAULT_USERNAME", "intern")
     default_password: str = os.getenv("DEFAULT_PASSWORD", "password123")
+    llm_request_timeout: float = float(os.getenv("LLM_REQUEST_TIMEOUT_SECONDS", "12.0"))
+    llm_daily_budget_usd: float = float(os.getenv("LLM_DAILY_BUDGET_USD", "5.0"))
 
 
 settings = Settings()
